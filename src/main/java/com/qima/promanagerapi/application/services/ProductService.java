@@ -25,6 +25,7 @@ public class ProductService implements ProductServiceAdapter {
         return productRepositoryAdapter.obtainAll();
     }
 
+
     @Override
     public Product update(Product product) {
         productRepositoryAdapter.obtainById(product.getId())

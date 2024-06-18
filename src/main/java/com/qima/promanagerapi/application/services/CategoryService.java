@@ -17,6 +17,11 @@ public class CategoryService implements CategoryServiceAdapter {
 
     @Override
     public Category create(Category category) {
+        if (category.getParentId() != null) {
+            Category categoryParent = categoryRepositoryAdapter.obtainById(category.getParentId())
+                    .orElseThrow(() -> new BusinessException("Parent category not found"));
+            category.setCategoryParent(categoryParent);
+        }
         return categoryRepositoryAdapter.create(category);
     }
 

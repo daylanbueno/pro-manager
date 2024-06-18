@@ -20,7 +20,11 @@ public class CategoryRepositoryAdapterImpl implements CategoryRepositoryAdapter 
 
     @Override
     public Category create(Category category) {
-        CategoryEntity categoryEntity = categoryRepository.save(categoryConverter.toEntity(category));
+        CategoryEntity entity = categoryConverter.toEntity(category);
+        if (category.getCategoryParent() != null) {
+            entity.setCategoryParent(categoryConverter.toEntity(category.getCategoryParent()));
+        }
+        CategoryEntity categoryEntity = categoryRepository.save(entity);
         return categoryConverter.toDomain(categoryEntity);
     }
 
