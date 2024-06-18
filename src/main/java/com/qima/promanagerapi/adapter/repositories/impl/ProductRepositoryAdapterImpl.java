@@ -38,4 +38,9 @@ public class ProductRepositoryAdapterImpl implements ProductRepositoryAdapter {
         return productRepository.findById(id)
                 .map(productConverter::toDomain);
     }
+
+    @Override
+    public void deleteById(Long id) {
+        productRepository.deleteById(id);
+    }
 }

@@ -5,6 +5,7 @@ import com.qima.promanagerapi.adapter.dtos.ProductDto;
 import com.qima.promanagerapi.application.domain.Product;
 import com.qima.promanagerapi.application.ports.ProductServiceAdapter;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -36,6 +37,12 @@ public class ProductController {
         return productServiceAdapter
                 .obtainAll()
                 .stream().map(productConverter::toDto).toList();
+    }
+
+    @DeleteMapping("/{id}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    private void deleteById(@PathVariable Long id){
+        productServiceAdapter.deleteById(id);
     }
 
 }

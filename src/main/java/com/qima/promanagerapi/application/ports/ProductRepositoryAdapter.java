@@ -12,4 +12,6 @@ public interface ProductRepositoryAdapter {
     List<Product> obtainAll();
 
     Optional<Product> obtainById(Long id);
+
+    void deleteById(Long id);
 }

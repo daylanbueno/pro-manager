@@ -31,4 +31,12 @@ public class ProductService implements ProductServiceAdapter {
                 .orElseThrow(() -> new BusinessException("Product not found"));
        return productRepositoryAdapter.create(product);
     }
+
+    @Override
+    public void deleteById(Long id) {
+        productRepositoryAdapter.obtainById(id)
+                .orElseThrow(() -> new BusinessException("Product not found"));
+
+        productRepositoryAdapter.deleteById(id);
+    }
 }
