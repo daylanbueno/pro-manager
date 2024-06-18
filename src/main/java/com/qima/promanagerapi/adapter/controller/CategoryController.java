@@ -1,18 +1,24 @@
 package com.qima.promanagerapi.adapter.controller;
 
+import com.qima.promanagerapi.adapter.converters.CategoryConverter;
+import com.qima.promanagerapi.adapter.dtos.CategoryDto;
+import com.qima.promanagerapi.application.domain.Category;
+import com.qima.promanagerapi.application.ports.CategoryServiceAdapter;
 import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("api/categories")
 @RequiredArgsConstructor
 public class CategoryController {
 
-    @GetMapping
-    private String get(){
-        return "test";
+    private final CategoryServiceAdapter categoryServiceAdapter;
+    private final CategoryConverter categoryConverter;
+
+    @PostMapping
+    private CategoryDto create(@RequestBody CategoryDto categoryDto){
+        Category category = categoryServiceAdapter.create(categoryConverter.toDomain(categoryDto));
+        return categoryConverter.toDto(category);
     }
 
 }

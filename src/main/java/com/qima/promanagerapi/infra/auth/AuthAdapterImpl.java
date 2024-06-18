@@ -10,7 +10,7 @@ import com.qima.promanagerapi.adapter.repositories.UserRepository;
 import com.qima.promanagerapi.application.domain.User;
 import com.qima.promanagerapi.application.exceptions.UnauthorizedException;
 import com.qima.promanagerapi.application.ports.UserRepositoryAdapter;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -21,6 +21,7 @@ import java.time.LocalDateTime;
 import java.time.ZoneOffset;
 
 @Component
+@RequiredArgsConstructor
 public class AuthAdapterImpl implements AuthAdapter {
 
     @Value("${auth.jwt.token.secret-key}")
@@ -32,10 +33,9 @@ public class AuthAdapterImpl implements AuthAdapter {
     @Value("${spring.application.name}")
     private String applicationName;
 
-    @Autowired
-    private UserRepositoryAdapter userRepositoryAdapter;
-    @Autowired
-    private UserRepository userRepository;
+    private final UserRepositoryAdapter userRepositoryAdapter;
+
+    private final UserRepository userRepository;
 
     public TokenResponseDto obtainToken(AuthDto authDto) {
       User user = userRepositoryAdapter.obtainByLogin(authDto.login())

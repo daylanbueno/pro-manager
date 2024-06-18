@@ -13,7 +13,7 @@ import java.util.Optional;
 
 @Component
 @RequiredArgsConstructor
-public class RepositoryAdapter implements UserRepositoryAdapter {
+public class UseRepositoryAdapterImpl implements UserRepositoryAdapter {
 
     private final UserRepository userRepository;
     private final UserConverter userConverter;
