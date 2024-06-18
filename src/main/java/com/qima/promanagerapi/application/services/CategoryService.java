@@ -1,6 +1,7 @@
 package com.qima.promanagerapi.application.services;
 
 import com.qima.promanagerapi.application.domain.Category;
+import com.qima.promanagerapi.application.exceptions.BusinessException;
 import com.qima.promanagerapi.application.ports.CategoryRepositoryAdapter;
 import com.qima.promanagerapi.application.ports.CategoryServiceAdapter;
 
@@ -22,5 +23,11 @@ public class CategoryService implements CategoryServiceAdapter {
     @Override
     public List<Category> obtainAll() {
         return categoryRepositoryAdapter.obtainAll();
+    }
+
+    @Override
+    public Category obtainById(Long id) {
+        return categoryRepositoryAdapter.obtainById(id)
+                .orElseThrow(() -> new BusinessException("Category not found"));
     }
 }

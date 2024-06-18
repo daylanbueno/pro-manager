@@ -8,4 +8,6 @@ public interface CategoryServiceAdapter {
     Category create(Category category);
 
     List<Category> obtainAll();
+
+    Category obtainById(Long id);
 }

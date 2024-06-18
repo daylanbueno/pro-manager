@@ -1,14 +1,15 @@
 package com.qima.promanagerapi.adapter.dtos;
 
-import com.qima.promanagerapi.application.domain.Category;
+import lombok.With;
 
 import java.math.BigDecimal;
 
 public record ProductDto(
+         @With
          Long id,
          String name,
          BigDecimal price,
-         Category category,
+         Long categoryId,
          String description,
          Boolean available
 ) {}

@@ -2,8 +2,10 @@ package com.qima.promanagerapi.infra;
 
 
 import com.qima.promanagerapi.application.ports.CategoryRepositoryAdapter;
+import com.qima.promanagerapi.application.ports.ProductRepositoryAdapter;
 import com.qima.promanagerapi.application.ports.UserRepositoryAdapter;
 import com.qima.promanagerapi.application.services.CategoryService;
+import com.qima.promanagerapi.application.services.ProductService;
 import com.qima.promanagerapi.application.services.UserService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -23,6 +25,11 @@ public class BeansConfiguration {
     @Bean
     public CategoryService categoryService(CategoryRepositoryAdapter categoryRepositoryAdapter) {
         return new CategoryService(categoryRepositoryAdapter);
+    }
+
+    @Bean
+    public ProductService productService(ProductRepositoryAdapter productRepositoryAdapter) {
+        return new ProductService(productRepositoryAdapter);
     }
 
     @Bean
