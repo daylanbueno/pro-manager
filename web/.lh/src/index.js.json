@@ -1,0 +1,22 @@
+{
+    "sourceFile": "src/index.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1718723554023,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1718723560375,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,7 @@\n import React from 'react';\n import ReactDOM from 'react-dom/client';\n-import './index.css';\n import App from './App';\n-import reportWebVitals from './reportWebVitals';\n \n const root = ReactDOM.createRoot(document.getElementById('root'));\n root.render(\n   <React.StrictMode>\n"
+                }
+            ],
+            "date": 1718723554023,
+            "name": "Commit-0",
+            "content": "import React from 'react';\nimport ReactDOM from 'react-dom/client';\nimport './index.css';\nimport App from './App';\nimport reportWebVitals from './reportWebVitals';\n\nconst root = ReactDOM.createRoot(document.getElementById('root'));\nroot.render(\n  <React.StrictMode>\n    <App />\n  </React.StrictMode>\n);"
+        }
+    ]
+}

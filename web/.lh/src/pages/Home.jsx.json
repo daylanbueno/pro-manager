@@ -1,0 +1,30 @@
+{
+    "sourceFile": "src/pages/Home.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1718728918961,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1718729440597,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,9 @@\n+import { Box } from \"@mui/material\";\n+\n export function Home() {\n     return (\n-        <div>\n+        <Box>\n             <h1>Home</h1>\n         </div>\n     )\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718729462796,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,8 +2,8 @@\n \n export function Home() {\n     return (\n         <Box>\n-            <h1>Home</h1>\n+            <Typography></Typography>\n         </Box>\n     )\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718729518579,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,9 @@\n+import { Box, Typography } from \"@mui/material\";\n+\n+export function Home() {\n+    return (\n+        <Box height=\"95vh\" sx={{ border: '1px solid red' }}>\n+            <Typography variant=\"h4\">Products</Typography>\n+        </Box>\n+    )\n+}\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1718728918961,
+            "name": "Commit-0",
+            "content": "export function Home() {\n    return (\n        <div>\n            <h1>Home</h1>\n        </div>\n    )\n}"
+        }
+    ]
+}

@@ -1,0 +1,26 @@
+{
+    "sourceFile": "public/index.html",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1718723638885,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1718723646115,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,28 +9,12 @@\n       name=\"description\"\n       content=\"Web site created using create-react-app\"\n     />\n     <link rel=\"apple-touch-icon\" href=\"%PUBLIC_URL%/logo192.png\" />\n-    <!--\n-      manifest.json provides metadata used when your web app is installed on a\n-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/\n-    -->\n     <link rel=\"manifest\" href=\"%PUBLIC_URL%/manifest.json\" />\n-\n-    -->\n     <title>React App</title>\n   </head>\n   <body>\n     <noscript>You need to enable JavaScript to run this app.</noscript>\n     <div id=\"root\"></div>\n-    <!--\n-      This HTML file is a template.\n-      If you open it directly in the browser, you will see an empty page.\n-\n-      You can add webfonts, meta tags, or analytics to this file.\n-      The build step will place the bundled scripts into the <body> tag.\n-\n-      To begin the development, run `npm start` or `yarn start`.\n-      To create a production bundle, use `npm run build` or `yarn build`.\n-    -->\n   </body>\n </html>\n"
+                },
+                {
+                    "date": 1718723656030,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n       content=\"Web site created using create-react-app\"\n     />\n     <link rel=\"apple-touch-icon\" href=\"%PUBLIC_URL%/logo192.png\" />\n     <link rel=\"manifest\" href=\"%PUBLIC_URL%/manifest.json\" />\n-    <title>React App</title>\n+    <title>Pro-Manager</title>\n   </head>\n   <body>\n     <noscript>You need to enable JavaScript to run this app.</noscript>\n     <div id=\"root\"></div>\n"
+                }
+            ],
+            "date": 1718723638885,
+            "name": "Commit-0",
+            "content": "<!DOCTYPE html>\n<html lang=\"en\">\n  <head>\n    <meta charset=\"utf-8\" />\n    <link rel=\"icon\" href=\"%PUBLIC_URL%/favicon.ico\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n    <meta name=\"theme-color\" content=\"#000000\" />\n    <meta\n      name=\"description\"\n      content=\"Web site created using create-react-app\"\n    />\n    <link rel=\"apple-touch-icon\" href=\"%PUBLIC_URL%/logo192.png\" />\n    <!--\n      manifest.json provides metadata used when your web app is installed on a\n      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/\n    -->\n    <link rel=\"manifest\" href=\"%PUBLIC_URL%/manifest.json\" />\n\n    -->\n    <title>React App</title>\n  </head>\n  <body>\n    <noscript>You need to enable JavaScript to run this app.</noscript>\n    <div id=\"root\"></div>\n    <!--\n      This HTML file is a template.\n      If you open it directly in the browser, you will see an empty page.\n\n      You can add webfonts, meta tags, or analytics to this file.\n      The build step will place the bundled scripts into the <body> tag.\n\n      To begin the development, run `npm start` or `yarn start`.\n      To create a production bundle, use `npm run build` or `yarn build`.\n    -->\n  </body>\n</html>\n"
+        }
+    ]
+}

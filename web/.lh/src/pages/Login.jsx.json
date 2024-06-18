@@ -1,0 +1,234 @@
+{
+    "sourceFile": "src/pages/Login.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 54,
+            "patches": [
+                {
+                    "date": 1718723836164,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1718727111300,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,8 @@\n+\n+export function Login() {\n+  return (\n+    <>\n+      <Typography >Olá Login</Typography>\n+    </>\n+  );\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718727619119,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,10 @@\n+import { Typography } from \"@mui/material\";\n \n export function Login() {\n   return (\n+\n+    <lebal></lebal>\n     <>\n       <Typography >Olá Login</Typography>\n     </>\n   );\n"
+                },
+                {
+                    "date": 1718727626779,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,8 @@\n import { Typography } from \"@mui/material\";\n \n export function Login() {\n   return (\n-\n-    <lebal></lebal>\n     <>\n       <Typography >Olá Login</Typography>\n     </>\n   );\n"
+                },
+                {
+                    "date": 1718727757484,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import { Typography } from \"@mui/material\";\n \n export function Login() {\n   return (\n-    <>\n+    <Box>\n       <Typography >Olá Login</Typography>\n-    </>\n+    </Box>\n   );\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718727768080,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,9 @@\n+import { Box, Typography } from \"@mui/material\";\n+\n+export function Login() {\n+  return (\n+    <Box>\n+      <Typography >Olá Login</Typography>\n+    </Box>\n+  );\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718727783421,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,18 +1,9 @@\n import { Box, Typography } from \"@mui/material\";\n \n export function Login() {\n   return (\n-    <Box>\n+    <Box display=\"flex\">\n       <Typography >Olá Login</Typography>\n     </Box>\n   );\n-}\n-import { Typography } from \"@mui/material\";\n-\n-export function Login() {\n-  return (\n-    <Box>\n-      <Typography >Olá Login</Typography>\n-    </Box>\n-  );\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718727789990,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,8 +2,8 @@\n \n export function Login() {\n   return (\n     <Box display=\"flex\">\n-      <Typography >Olá Login</Typography>\n+      <Typography > Login</Typography>\n     </Box>\n   );\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718727800627,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,10 @@\n-import { Box, Typography } from \"@mui/material\";\n+import { Box, TextField, Typography } from \"@mui/material\";\n \n export function Login() {\n   return (\n     <Box display=\"flex\">\n-      <Typography > Login</Typography>\n+      <Typography >Login</Typography>\n+      <TextField />\n     </Box>\n   );\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718727870135,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,8 @@\n export function Login() {\n   return (\n     <Box display=\"flex\">\n       <Typography >Login</Typography>\n-      <TextField />\n+      <TextField  placeholder=\"Login\" />\n     </Box>\n   );\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718727879661,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,7 +4,8 @@\n   return (\n     <Box display=\"flex\">\n       <Typography >Login</Typography>\n       <TextField  placeholder=\"Login\" />\n+      <TextField  placeholder=\"Login\" />\n     </Box>\n   );\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718727911613,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,11 @@\n+import { Box, TextField, Typography } from \"@mui/material\";\n+\n+export function Login() {\n+  return (\n+    <Box display=\"flex\" flexDirection=\"column\">\n+      <Typography >Login</Typography>\n+      <TextField  placeholder=\"Login\" />\n+      <TextField  placeholder=\"Password\" />\n+    </Box>\n+  );\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718727924132,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,16 +7,5 @@\n       <TextField  placeholder=\"Login\" />\n       <TextField  placeholder=\"Password\" />\n     </Box>\n   );\n-}\n-import { Box, TextField, Typography } from \"@mui/material\";\n-\n-export function Login() {\n-  return (\n-    <Box display=\"flex\">\n-      <Typography >Login</Typography>\n-      <TextField  placeholder=\"Login\" />\n-      <TextField  placeholder=\"Login\" />\n-    </Box>\n-  );\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718727952207,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import { Box, TextField, Typography } from \"@mui/material\";\n \n export function Login() {\n   return (\n-    <Box display=\"flex\" flexDirection=\"column\">\n+    <Box display=\"flex\" flexDirection=\"column\" maxWidth={300}>\n       <Typography >Login</Typography>\n       <TextField  placeholder=\"Login\" />\n       <TextField  placeholder=\"Password\" />\n     </Box>\n"
+                },
+                {
+                    "date": 1718727959593,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import { Box, TextField, Typography } from \"@mui/material\";\n \n export function Login() {\n   return (\n-    <Box display=\"flex\" flexDirection=\"column\" maxWidth={300}>\n+    <Box display=\"flex\" flexDirection=\"column\" maxWidth={500}>\n       <Typography >Login</Typography>\n       <TextField  placeholder=\"Login\" />\n       <TextField  placeholder=\"Password\" />\n     </Box>\n"
+                },
+                {
+                    "date": 1718727982812,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,10 +2,12 @@\n \n export function Login() {\n   return (\n     <Box display=\"flex\" flexDirection=\"column\" maxWidth={500}>\n+    <Box display=\"flex\" flexDirection=\"column\" maxWidth={500}>\n       <Typography >Login</Typography>\n       <TextField  placeholder=\"Login\" />\n       <TextField  placeholder=\"Password\" />\n     </Box>\n+    <Box></Box>\n   );\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718728018743,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,13 +1,13 @@\n import { Box, TextField, Typography } from \"@mui/material\";\n \n export function Login() {\n   return (\n+    <Box display=\"flex\" flexDirection=\"column\" sx={{ border: '1px solid  red' }}>\n     <Box display=\"flex\" flexDirection=\"column\" maxWidth={500}>\n-    <Box display=\"flex\" flexDirection=\"column\" maxWidth={500}>\n       <Typography >Login</Typography>\n       <TextField  placeholder=\"Login\" />\n       <TextField  placeholder=\"Password\" />\n     </Box>\n-    <Box></Box>\n+    </Box>\n   );\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718728044961,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import { Box, TextField, Typography } from \"@mui/material\";\n \n export function Login() {\n   return (\n-    <Box display=\"flex\" flexDirection=\"column\" sx={{ border: '1px solid  red' }}>\n+    <Box display=\"flex\" height={100vh} flexDirection=\"column\" sx={{ border: '1px solid  red' }}>\n     <Box display=\"flex\" flexDirection=\"column\" maxWidth={500}>\n       <Typography >Login</Typography>\n       <TextField  placeholder=\"Login\" />\n       <TextField  placeholder=\"Password\" />\n"
+                },
+                {
+                    "date": 1718728061662,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import { Box, TextField, Typography } from \"@mui/material\";\n \n export function Login() {\n   return (\n-    <Box display=\"flex\" height={100vh} flexDirection=\"column\" sx={{ border: '1px solid  red' }}>\n+    <Box display=\"flex\" height='80vh' flexDirection=\"column\" sx={{ border: '1px solid  red' }}>\n     <Box display=\"flex\" flexDirection=\"column\" maxWidth={500}>\n       <Typography >Login</Typography>\n       <TextField  placeholder=\"Login\" />\n       <TextField  placeholder=\"Password\" />\n"
+                },
+                {
+                    "date": 1718728070243,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import { Box, TextField, Typography } from \"@mui/material\";\n \n export function Login() {\n   return (\n-    <Box display=\"flex\" height='80vh' flexDirection=\"column\" sx={{ border: '1px solid  red' }}>\n+    <Box display=\"flex\" height='96vh' flexDirection=\"column\" sx={{ border: '1px solid  red' }}>\n     <Box display=\"flex\" flexDirection=\"column\" maxWidth={500}>\n       <Typography >Login</Typography>\n       <TextField  placeholder=\"Login\" />\n       <TextField  placeholder=\"Password\" />\n"
+                },
+                {
+                    "date": 1718728097173,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,12 +2,12 @@\n \n export function Login() {\n   return (\n     <Box display=\"flex\" height='96vh' flexDirection=\"column\" sx={{ border: '1px solid  red' }}>\n-    <Box display=\"flex\" flexDirection=\"column\" maxWidth={500}>\n-      <Typography >Login</Typography>\n-      <TextField  placeholder=\"Login\" />\n-      <TextField  placeholder=\"Password\" />\n+        <Box display=\"flex\" flexDirection=\"column\" maxWidth={500}>\n+        <Typography >Login</Typography>\n+        <TextField  placeholder=\"Login\" />\n+        <TextField  placeholder=\"Password\" />\n+        </Box>\n     </Box>\n-    </Box>\n   );\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718728116972,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,13 +1,13 @@\n import { Box, TextField, Typography } from \"@mui/material\";\n \n export function Login() {\n   return (\n-    <Box display=\"flex\" height='96vh' flexDirection=\"column\" sx={{ border: '1px solid  red' }}>\n+    <Box display=\"flex\" height='96vh' justifyContent=\"center\" flexDirection=\"column\"  sx={{ border: '1px solid  red' }}>\n         <Box display=\"flex\" flexDirection=\"column\" maxWidth={500}>\n-        <Typography >Login</Typography>\n-        <TextField  placeholder=\"Login\" />\n-        <TextField  placeholder=\"Password\" />\n+            <Typography >Login</Typography>\n+            <TextField  placeholder=\"Login\" />\n+            <TextField  placeholder=\"Password\" />\n         </Box>\n     </Box>\n   );\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718728133565,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import { Box, TextField, Typography } from \"@mui/material\";\n \n export function Login() {\n   return (\n-    <Box display=\"flex\" height='96vh' justifyContent=\"center\" flexDirection=\"column\"  sx={{ border: '1px solid  red' }}>\n+    <Box display=\"flex\" height='96vh' justifyContent=\"center\"  flexDirection=\"row\"  sx={{ border: '1px solid  red' }}>\n         <Box display=\"flex\" flexDirection=\"column\" maxWidth={500}>\n             <Typography >Login</Typography>\n             <TextField  placeholder=\"Login\" />\n             <TextField  placeholder=\"Password\" />\n"
+                },
+                {
+                    "date": 1718728145528,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,13 @@\n+import { Box, TextField, Typography } from \"@mui/material\";\n+\n+export function Login() {\n+  return (\n+    <Box display=\"flex\" height='96vh' justifyContent=\"center\"  flexDirection=\"row\" alignItems=\"center\"  sx={{ border: '1px solid  red' }}>\n+        <Box display=\"flex\" flexDirection=\"column\" maxWidth={500}>\n+            <Typography >Login</Typography>\n+            <TextField  placeholder=\"Login\" />\n+            <TextField  placeholder=\"Password\" />\n+        </Box>\n+    </Box>\n+  );\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718728152756,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,26 +1,13 @@\n import { Box, TextField, Typography } from \"@mui/material\";\n \n export function Login() {\n   return (\n-    <Box display=\"flex\" height='96vh' justifyContent=\"center\"  flexDirection=\"row\" alignItems=\"center\"  sx={{ border: '1px solid  red' }}>\n+    <Box display=\"flex\" height='96vh' justifyContent=\"center\"  alignItems=\"center\"  sx={{ border: '1px solid  red' }}>\n         <Box display=\"flex\" flexDirection=\"column\" maxWidth={500}>\n             <Typography >Login</Typography>\n             <TextField  placeholder=\"Login\" />\n             <TextField  placeholder=\"Password\" />\n         </Box>\n     </Box>\n   );\n-}\n-import { Box, TextField, Typography } from \"@mui/material\";\n-\n-export function Login() {\n-  return (\n-    <Box display=\"flex\" height='96vh' justifyContent=\"center\"  flexDirection=\"row\"  sx={{ border: '1px solid  red' }}>\n-        <Box display=\"flex\" flexDirection=\"column\" maxWidth={500}>\n-            <Typography >Login</Typography>\n-            <TextField  placeholder=\"Login\" />\n-            <TextField  placeholder=\"Password\" />\n-        </Box>\n-    </Box>\n-  );\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718728172887,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \n export function Login() {\n   return (\n     <Box display=\"flex\" height='96vh' justifyContent=\"center\"  alignItems=\"center\"  sx={{ border: '1px solid  red' }}>\n-        <Box display=\"flex\" flexDirection=\"column\" maxWidth={500}>\n+        <Box display=\"flex\" flexDirection=\"column\">\n             <Typography >Login</Typography>\n             <TextField  placeholder=\"Login\" />\n             <TextField  placeholder=\"Password\" />\n         </Box>\n"
+                },
+                {
+                    "date": 1718728183609,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \n export function Login() {\n   return (\n     <Box display=\"flex\" height='96vh' justifyContent=\"center\"  alignItems=\"center\"  sx={{ border: '1px solid  red' }}>\n-        <Box display=\"flex\" flexDirection=\"column\">\n+        <Box display=\"flex\" flexDirection=\"column\"  sx={{ border: '1px solid  red' }}>\n             <Typography >Login</Typography>\n             <TextField  placeholder=\"Login\" />\n             <TextField  placeholder=\"Password\" />\n         </Box>\n"
+                },
+                {
+                    "date": 1718728200896,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \n export function Login() {\n   return (\n     <Box display=\"flex\" height='96vh' justifyContent=\"center\"  alignItems=\"center\"  sx={{ border: '1px solid  red' }}>\n-        <Box display=\"flex\" flexDirection=\"column\"  sx={{ border: '1px solid  red' }}>\n+        <Box display=\"flex\" width=\"50vw\" flexDirection=\"column\"  sx={{ border: '1px solid  red' }}>\n             <Typography >Login</Typography>\n             <TextField  placeholder=\"Login\" />\n             <TextField  placeholder=\"Password\" />\n         </Box>\n"
+                },
+                {
+                    "date": 1718728209498,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \n export function Login() {\n   return (\n     <Box display=\"flex\" height='96vh' justifyContent=\"center\"  alignItems=\"center\"  sx={{ border: '1px solid  red' }}>\n-        <Box display=\"flex\" width=\"50vw\" flexDirection=\"column\"  sx={{ border: '1px solid  red' }}>\n+        <Box display=\"flex\" width=\"30vw\" flexDirection=\"column\"  sx={{ border: '1px solid  red' }}>\n             <Typography >Login</Typography>\n             <TextField  placeholder=\"Login\" />\n             <TextField  placeholder=\"Password\" />\n         </Box>\n"
+                },
+                {
+                    "date": 1718728244237,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \n export function Login() {\n   return (\n     <Box display=\"flex\" height='96vh' justifyContent=\"center\"  alignItems=\"center\"  sx={{ border: '1px solid  red' }}>\n-        <Box display=\"flex\" width=\"30vw\" flexDirection=\"column\"  sx={{ border: '1px solid  red' }}>\n+        <Box display=\"flex\" width=\"30vw\" flexDirection=\"column\"  sx={{ border: '1px solid  red', gap: 2 }}>\n             <Typography >Login</Typography>\n             <TextField  placeholder=\"Login\" />\n             <TextField  placeholder=\"Password\" />\n         </Box>\n"
+                },
+                {
+                    "date": 1718728273946,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,8 +6,9 @@\n         <Box display=\"flex\" width=\"30vw\" flexDirection=\"column\"  sx={{ border: '1px solid  red', gap: 2 }}>\n             <Typography >Login</Typography>\n             <TextField  placeholder=\"Login\" />\n             <TextField  placeholder=\"Password\" />\n+            <Button variant=\"outlined\">Outlined</Button>\n         </Box>\n     </Box>\n   );\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718728280546,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import { Box, TextField, Typography } from \"@mui/material\";\n+import { Box, Button, TextField, Typography } from \"@mui/material\";\n \n export function Login() {\n   return (\n     <Box display=\"flex\" height='96vh' justifyContent=\"center\"  alignItems=\"center\"  sx={{ border: '1px solid  red' }}>\n"
+                },
+                {
+                    "date": 1718728291411,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n         <Box display=\"flex\" width=\"30vw\" flexDirection=\"column\"  sx={{ border: '1px solid  red', gap: 2 }}>\n             <Typography >Login</Typography>\n             <TextField  placeholder=\"Login\" />\n             <TextField  placeholder=\"Password\" />\n-            <Button variant=\"outlined\">Outlined</Button>\n+            <Button variant=\"outlined\">Enter</Button>\n         </Box>\n     </Box>\n   );\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718728317687,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \n export function Login() {\n   return (\n     <Box display=\"flex\" height='96vh' justifyContent=\"center\"  alignItems=\"center\"  sx={{ border: '1px solid  red' }}>\n-        <Box display=\"flex\" width=\"30vw\" flexDirection=\"column\"  sx={{ border: '1px solid  red', gap: 2 }}>\n+        <Box display=\"flex\" width=\"20vw\" flexDirection=\"column\"  sx={{ border: '1px solid  red', gap: 2 }}>\n             <Typography >Login</Typography>\n             <TextField  placeholder=\"Login\" />\n             <TextField  placeholder=\"Password\" />\n             <Button variant=\"outlined\">Enter</Button>\n"
+                },
+                {
+                    "date": 1718728353733,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n export function Login() {\n   return (\n     <Box display=\"flex\" height='96vh' justifyContent=\"center\"  alignItems=\"center\"  sx={{ border: '1px solid  red' }}>\n         <Box display=\"flex\" width=\"20vw\" flexDirection=\"column\"  sx={{ border: '1px solid  red', gap: 2 }}>\n-            <Typography >Login</Typography>\n+            <Typography variant=\"h4\" >Login</Typography>\n             <TextField  placeholder=\"Login\" />\n             <TextField  placeholder=\"Password\" />\n             <Button variant=\"outlined\">Enter</Button>\n         </Box>\n"
+                },
+                {
+                    "date": 1718728363581,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,10 +2,10 @@\n \n export function Login() {\n   return (\n     <Box display=\"flex\" height='96vh' justifyContent=\"center\"  alignItems=\"center\"  sx={{ border: '1px solid  red' }}>\n-        <Box display=\"flex\" width=\"20vw\" flexDirection=\"column\"  sx={{ border: '1px solid  red', gap: 2 }}>\n-            <Typography variant=\"h4\" >Login</Typography>\n+        <Box display=\"flex\" width=\"20vw\" flexDirection=\"column\"  sx={{  gap: 2 }}>\n+            <Typography variant=\"h4\">Login</Typography>\n             <TextField  placeholder=\"Login\" />\n             <TextField  placeholder=\"Password\" />\n             <Button variant=\"outlined\">Enter</Button>\n         </Box>\n"
+                },
+                {
+                    "date": 1718728370155,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import { Box, Button, TextField, Typography } from \"@mui/material\";\n \n export function Login() {\n   return (\n-    <Box display=\"flex\" height='96vh' justifyContent=\"center\"  alignItems=\"center\"  sx={{ border: '1px solid  red' }}>\n+    <Box display=\"flex\" height='96vh' justifyContent=\"center\"  alignItems=\"center\" >\n         <Box display=\"flex\" width=\"20vw\" flexDirection=\"column\"  sx={{  gap: 2 }}>\n             <Typography variant=\"h4\">Login</Typography>\n             <TextField  placeholder=\"Login\" />\n             <TextField  placeholder=\"Password\" />\n"
+                },
+                {
+                    "date": 1718728403310,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,14 +1,14 @@\n import { Box, Button, TextField, Typography } from \"@mui/material\";\n \n export function Login() {\n   return (\n-    <Box display=\"flex\" height='96vh' justifyContent=\"center\"  alignItems=\"center\" >\n+    <Box display=\"flex\" height='96vh' justifyContent=\"center\"  alignItems=\"center\">\n         <Box display=\"flex\" width=\"20vw\" flexDirection=\"column\"  sx={{  gap: 2 }}>\n             <Typography variant=\"h4\">Login</Typography>\n             <TextField  placeholder=\"Login\" />\n             <TextField  placeholder=\"Password\" />\n-            <Button variant=\"outlined\">Enter</Button>\n+            <Button width={4} variant=\"outlined\">Enter</Button>\n         </Box>\n     </Box>\n   );\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718728411365,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,10 @@\n         <Box display=\"flex\" width=\"20vw\" flexDirection=\"column\"  sx={{  gap: 2 }}>\n             <Typography variant=\"h4\">Login</Typography>\n             <TextField  placeholder=\"Login\" />\n             <TextField  placeholder=\"Password\" />\n-            <Button width={4} variant=\"outlined\">Enter</Button>\n+            <Button \n+             variant=\"outlined\">Enter</Button>\n         </Box>\n     </Box>\n   );\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718728456805,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,10 +6,9 @@\n         <Box display=\"flex\" width=\"20vw\" flexDirection=\"column\"  sx={{  gap: 2 }}>\n             <Typography variant=\"h4\">Login</Typography>\n             <TextField  placeholder=\"Login\" />\n             <TextField  placeholder=\"Password\" />\n-            <Button \n-             variant=\"outlined\">Enter</Button>\n+            <Button color=\"primary\"  variant=\"outlined\">Enter</Button>\n         </Box>\n     </Box>\n   );\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718728464363,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,14 @@\n+import { Box, Button, TextField, Typography } from \"@mui/material\";\n+\n+export function Login() {\n+  return (\n+    <Box display=\"flex\" height='96vh' justifyContent=\"center\"  alignItems=\"center\">\n+        <Box display=\"flex\" width=\"20vw\" flexDirection=\"column\"  sx={{  gap: 2 }}>\n+            <Typography variant=\"h4\">Login</Typography>\n+            <TextField  placeholder=\"Login\" />\n+            <TextField  placeholder=\"Password\" />\n+            <Button color=\"primary\">Enter</Button>\n+        </Box>\n+    </Box>\n+  );\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718728485638,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,23 +6,9 @@\n         <Box display=\"flex\" width=\"20vw\" flexDirection=\"column\"  sx={{  gap: 2 }}>\n             <Typography variant=\"h4\">Login</Typography>\n             <TextField  placeholder=\"Login\" />\n             <TextField  placeholder=\"Password\" />\n-            <Button color=\"primary\">Enter</Button>\n+            <Button color=\"primary\" variant=\"contained\">Enter</Button>\n         </Box>\n     </Box>\n   );\n-}\n-import { Box, Button, TextField, Typography } from \"@mui/material\";\n-\n-export function Login() {\n-  return (\n-    <Box display=\"flex\" height='96vh' justifyContent=\"center\"  alignItems=\"center\">\n-        <Box display=\"flex\" width=\"20vw\" flexDirection=\"column\"  sx={{  gap: 2 }}>\n-            <Typography variant=\"h4\">Login</Typography>\n-            <TextField  placeholder=\"Login\" />\n-            <TextField  placeholder=\"Password\" />\n-            <Button color=\"primary\"  variant=\"outlined\">Enter</Button>\n-        </Box>\n-    </Box>\n-  );\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718728960192,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,14 +1,20 @@\n import { Box, Button, TextField, Typography } from \"@mui/material\";\n \n export function Login() {\n+\n+\n+  const handleLogin = () => {\n+\n+  }  \n+\n   return (\n     <Box display=\"flex\" height='96vh' justifyContent=\"center\"  alignItems=\"center\">\n         <Box display=\"flex\" width=\"20vw\" flexDirection=\"column\"  sx={{  gap: 2 }}>\n             <Typography variant=\"h4\">Login</Typography>\n             <TextField  placeholder=\"Login\" />\n             <TextField  placeholder=\"Password\" />\n-            <Button color=\"primary\" variant=\"contained\">Enter</Button>\n+            <Button onClick={handleLogin} color=\"primary\" variant=\"contained\">Enter</Button>\n         </Box>\n     </Box>\n   );\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718728975419,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,7 @@\n import { Box, Button, TextField, Typography } from \"@mui/material\";\n \n export function Login() {\n-\n-\n   const handleLogin = () => {\n \n   }  \n \n"
+                },
+                {
+                    "date": 1718728983090,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,9 @@\n import { Box, Button, TextField, Typography } from \"@mui/material\";\n+import { useNavigate } from 'react-router-dom';\n \n export function Login() {\n+    const navigate = useNavigate();\n   const handleLogin = () => {\n \n   }  \n \n"
+                },
+                {
+                    "date": 1718729029241,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,11 @@\n import { Box, Button, TextField, Typography } from \"@mui/material\";\n import { useNavigate } from 'react-router-dom';\n \n export function Login() {\n-    const navigate = useNavigate();\n+  const navigate = useNavigate();\n   const handleLogin = () => {\n-\n+    navigate('/home')\n   }  \n \n   return (\n     <Box display=\"flex\" height='96vh' justifyContent=\"center\"  alignItems=\"center\">\n"
+                },
+                {
+                    "date": 1718729048340,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,9 @@\n \n export function Login() {\n   const navigate = useNavigate();\n   const handleLogin = () => {\n+    console.log\n     navigate('/home')\n   }  \n \n   return (\n"
+                },
+                {
+                    "date": 1718729062352,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,10 +2,11 @@\n import { useNavigate } from 'react-router-dom';\n \n export function Login() {\n   const navigate = useNavigate();\n+  \n   const handleLogin = () => {\n-    console.log\n+    console.log('Login...')\n     navigate('/home')\n   }  \n \n   return (\n"
+                },
+                {
+                    "date": 1718729069101,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import { useNavigate } from 'react-router-dom';\n \n export function Login() {\n   const navigate = useNavigate();\n-  \n+\n   const handleLogin = () => {\n     console.log('Login...')\n     navigate('/home')\n   }  \n@@ -14,9 +14,9 @@\n         <Box display=\"flex\" width=\"20vw\" flexDirection=\"column\"  sx={{  gap: 2 }}>\n             <Typography variant=\"h4\">Login</Typography>\n             <TextField  placeholder=\"Login\" />\n             <TextField  placeholder=\"Password\" />\n-            <Button onClick={handleLogin} color=\"primary\" variant=\"contained\">Enter</Button>\n+            <Button onClick={() => handleLogin()} color=\"primary\" variant=\"contained\">Enter</Button>\n         </Box>\n     </Box>\n   );\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718729090849,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n import { Box, Button, TextField, Typography } from \"@mui/material\";\n import { useNavigate } from 'react-router-dom';\n \n export function Login() {\n+    \n   const navigate = useNavigate();\n \n   const handleLogin = () => {\n     console.log('Login...')\n"
+                },
+                {
+                    "date": 1718749997763,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,23 +1,67 @@\n-import { Box, Button, TextField, Typography } from \"@mui/material\";\n+import React, { useState } from 'react';\n+import { Box, Button, TextField, Typography } from '@mui/material';\n import { useNavigate } from 'react-router-dom';\n \n export function Login() {\n-    \n-  const navigate = useNavigate();\n+    const navigate = useNavigate();\n+    const [loginData, setLoginData] = useState({\n+        username: '',\n+        password: '',\n+    });\n+    const [error, setError] = useState('');\n \n-  const handleLogin = () => {\n-    console.log('Login...')\n-    navigate('/home')\n-  }  \n+    const handleInputChange = (e) => {\n+        setLoginData({\n+            ...loginData,\n+            [e.target.name]: e.target.value,\n\\ No newline at end of file\n+        });\n+    };\n \n-  return (\n-    <Box display=\"flex\" height='96vh' justifyContent=\"center\"  alignItems=\"center\">\n-        <Box display=\"flex\" width=\"20vw\" flexDirection=\"column\"  sx={{  gap: 2 }}>\n-            <Typography variant=\"h4\">Login</Typography>\n-            <TextField  placeholder=\"Login\" />\n-            <TextField  placeholder=\"Password\" />\n-            <Button onClick={() => handleLogin()} color=\"primary\" variant=\"contained\">Enter</Button>\n+    const handleLogin = () => {\n+        // Mock login validation (replace with actual authentication logic)\n+        if (loginData.username === 'admin' && loginData.password === 'password') {\n+            console.log('Login successful');\n+            navigate('/home');\n+        } else {\n+            setError('Invalid username or password');\n+        }\n+    };\n+\n+    return (\n+        <Box display=\"flex\" height=\"100vh\" justifyContent=\"center\" alignItems=\"center\">\n+            <Box sx={{ width: '300px', p: 3, boxShadow: 3, borderRadius: 8 }}>\n+                <Typography variant=\"h4\" gutterBottom sx={{ textAlign: 'center' }}>Login</Typography>\n+                <TextField\n+                    fullWidth\n+                    label=\"Username\"\n+                    name=\"username\"\n+                    value={loginData.username}\n+                    onChange={handleInputChange}\n+                    variant=\"outlined\"\n+                    margin=\"normal\"\n+                />\n+                <TextField\n+                    fullWidth\n+                    type=\"password\"\n+                    label=\"Password\"\n+                    name=\"password\"\n+                    value={loginData.password}\n+                    onChange={handleInputChange}\n+                    variant=\"outlined\"\n+                    margin=\"normal\"\n+                    error={error !== ''}\n+                    helperText={error}\n+                />\n+                <Button\n+                    fullWidth\n+                    onClick={handleLogin}\n+                    variant=\"contained\"\n+                    color=\"primary\"\n+                    sx={{ mt: 2 }}\n+                >\n+                    Enter\n+                </Button>\n+            </Box>\n         </Box>\n-    </Box>\n-  );\n-}\n+    );\n+}\n"
+                },
+                {
+                    "date": 1718750003418,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,8 @@\n         });\n     };\n \n     const handleLogin = () => {\n-        // Mock login validation (replace with actual authentication logic)\n         if (loginData.username === 'admin' && loginData.password === 'password') {\n             console.log('Login successful');\n             navigate('/home');\n         } else {\n@@ -63,5 +62,5 @@\n                 </Button>\n             </Box>\n         </Box>\n     );\n-}\n\\ No newline at end of file\n+}\n"
+                },
+                {
+                    "date": 1718750061304,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,8 +25,10 @@\n             setError('Invalid username or password');\n         }\n     };\n \n+    console.log\n+\n     return (\n         <Box display=\"flex\" height=\"100vh\" justifyContent=\"center\" alignItems=\"center\">\n             <Box sx={{ width: '300px', p: 3, boxShadow: 3, borderRadius: 8 }}>\n                 <Typography variant=\"h4\" gutterBottom sx={{ textAlign: 'center' }}>Login</Typography>\n"
+                },
+                {
+                    "date": 1718750229067,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n import React, { useState } from 'react';\n+import axios from 'axios';\n import { Box, Button, TextField, Typography } from '@mui/material';\n import { useNavigate } from 'react-router-dom';\n \n export function Login() {\n@@ -16,19 +17,22 @@\n             [e.target.name]: e.target.value,\n         });\n     };\n \n-    const handleLogin = () => {\n-        if (loginData.username === 'admin' && loginData.password === 'password') {\n-            console.log('Login successful');\n+    const handleLogin = async () => {\n+        try {\n+            const response = await axios.post('http://localhost:8080/api/auth', {\n+                login: loginData.username,\n+                password: loginData.password,\n+            });\n+            const { token } = response.data;\n+            localStorage.setItem('token', token); // Armazena o token no localStorage\n             navigate('/home');\n-        } else {\n+        } catch (error) {\n             setError('Invalid username or password');\n         }\n     };\n \n-    console.log\n-\n     return (\n         <Box display=\"flex\" height=\"100vh\" justifyContent=\"center\" alignItems=\"center\">\n             <Box sx={{ width: '300px', p: 3, boxShadow: 3, borderRadius: 8 }}>\n                 <Typography variant=\"h4\" gutterBottom sx={{ textAlign: 'center' }}>Login</Typography>\n"
+                },
+                {
+                    "date": 1718750234123,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,9 @@\n                 login: loginData.username,\n                 password: loginData.password,\n             });\n             const { token } = response.data;\n-            localStorage.setItem('token', token); // Armazena o token no localStorage\n+            localStorage.setItem('token', token); \n             navigate('/home');\n         } catch (error) {\n             setError('Invalid username or password');\n         }\n"
+                }
+            ],
+            "date": 1718723836164,
+            "name": "Commit-0",
+            "content": ""
+        }
+    ]
+}

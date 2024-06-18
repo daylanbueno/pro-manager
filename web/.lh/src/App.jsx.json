@@ -1,0 +1,94 @@
+{
+    "sourceFile": "src/App.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 19,
+            "patches": [
+                {
+                    "date": 1718723611865,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1718723617356,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,10 +3,9 @@\n \n function App() {\n   return (\n     <div className=\"App\">\n-      <p></p>\n-      \n+      <p>App</p>\n     </div>\n   );\n }\n \n"
+                },
+                {
+                    "date": 1718723628546,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,4 @@\n-import logo from './logo.svg';\n-import './App.css';\n \n function App() {\n   return (\n     <div className=\"App\">\n"
+                },
+                {
+                    "date": 1718723773640,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,7 @@\n-\n function App() {\n   return (\n-    <div className=\"App\">\n+    <>\n       <p>App</p>\n     </div>\n   );\n }\n"
+                },
+                {
+                    "date": 1718723809112,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,11 @@\n+import { Typography } from \"@mui/material\";\n+\n function App() {\n   return (\n     <>\n-      <p>App</p>\n-    </div>\n+      <Typography ></Typography>\n+    </>\n   );\n }\n \n export default App;\n"
+                },
+                {
+                    "date": 1718723821484,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \n function App() {\n   return (\n     <>\n-      <Typography ></Typography>\n+      <Typography >Olá App</Typography>\n     </>\n   );\n }\n \n"
+                },
+                {
+                    "date": 1718727642011,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \n function App() {\n   return (\n     <>\n-      <Typography >Olá App</Typography>\n+      <Login />\n     </>\n   );\n }\n \n"
+                },
+                {
+                    "date": 1718727649626,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import { Typography } from \"@mui/material\";\n+import { Login } from \"./pages/Login\";\n \n function App() {\n   return (\n     <>\n"
+                },
+                {
+                    "date": 1718727716603,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,12 @@\n+import { Box } from \"@mui/material\";\n+import { Login } from \"./pages/Login\";\n+\n+function App() {\n+  return (\n+    <Box>\n+      <Login />\n+    </>\n+  );\n+}\n+\n+export default App;\n"
+                },
+                {
+                    "date": 1718727724507,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,20 +4,9 @@\n function App() {\n   return (\n     <Box>\n       <Login />\n-    </>\n+    < Box/>\n   );\n }\n \n export default App;\n-import { Login } from \"./pages/Login\";\n-\n-function App() {\n-  return (\n-    <>\n-      <Login />\n-    </>\n-  );\n-}\n-\n-export default App;\n"
+                },
+                {
+                    "date": 1718727732335,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n function App() {\n   return (\n     <Box>\n       <Login />\n-    < Box/>\n+    < /Box>\n   );\n }\n \n export default App;\n"
+                },
+                {
+                    "date": 1718727752843,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,11 +2,11 @@\n import { Login } from \"./pages/Login\";\n \n function App() {\n   return (\n-    <Box>\n+    <>\n       <Login />\n-    < /Box>\n+    </>\n   );\n }\n \n export default App;\n"
+                },
+                {
+                    "date": 1718728618677,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,4 @@\n-import { Box } from \"@mui/material\";\n import { Login } from \"./pages/Login\";\n \n function App() {\n   return (\n"
+                },
+                {
+                    "date": 1718728867330,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,14 @@\n import { Login } from \"./pages/Login\";\n \n function App() {\n   return (\n-    <>\n-      <Login />\n-    </>\n+    <Router>\n+      <Routes>\n+        <Route path=\"/\" element={<Login />} />\n+        <Route path=\"/home\" element={<Home />} />\n+      </Routes>\n+    </Router>\n   );\n }\n \n export default App;\n"
+                },
+                {
+                    "date": 1718728874342,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,5 @@\n+import { Route, Router, Routes } from \"react-router-dom\";\n import { Login } from \"./pages/Login\";\n \n function App() {\n   return (\n"
+                },
+                {
+                    "date": 1718728928631,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n import { Route, Router, Routes } from \"react-router-dom\";\n import { Login } from \"./pages/Login\";\n+import { Home } from \"./pages/Home\";\n \n function App() {\n   return (\n     <Router>\n"
+                },
+                {
+                    "date": 1718729332048,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import { Route, Router, Routes } from \"react-router-dom\";\n+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';\n import { Login } from \"./pages/Login\";\n import { Home } from \"./pages/Home\";\n \n function App() {\n"
+                },
+                {
+                    "date": 1718729352579,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';\n+import { BrowserRouter, Routes, Route } from 'react-router-dom';\n import { Login } from \"./pages/Login\";\n import { Home } from \"./pages/Home\";\n \n function App() {\n"
+                },
+                {
+                    "date": 1718729360842,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,16 @@\n+import { BrowserRouter , Routes, Route } from 'react-router-dom';\n+import { Login } from \"./pages/Login\";\n+import { Home } from \"./pages/Home\";\n+\n+function App() {\n+  return (\n+    <BrowserRouter>\n+      <Routes>\n+        <Route path=\"/\" element={<Login />} />\n+        <Route path=\"/home\" element={<Home />} />\n+      </Routes>\n+    </BrowserRouter>\n+  );\n+}\n+\n+export default App;\n"
+                },
+                {
+                    "date": 1718729379927,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,20 +13,4 @@\n   );\n }\n \n export default App;\n-import { BrowserRouter, Routes, Route } from 'react-router-dom';\n-import { Login } from \"./pages/Login\";\n-import { Home } from \"./pages/Home\";\n-\n-function App() {\n-  return (\n-    <Router>\n-      <Routes>\n-        <Route path=\"/\" element={<Login />} />\n-        <Route path=\"/home\" element={<Home />} />\n-      </Routes>\n-    </Router>\n-  );\n-}\n-\n-export default App;\n"
+                }
+            ],
+            "date": 1718723611865,
+            "name": "Commit-0",
+            "content": "import logo from './logo.svg';\nimport './App.css';\n\nfunction App() {\n  return (\n    <div className=\"App\">\n      <p></p>\n      \n    </div>\n  );\n}\n\nexport default App;\n"
+        }
+    ]
+}
