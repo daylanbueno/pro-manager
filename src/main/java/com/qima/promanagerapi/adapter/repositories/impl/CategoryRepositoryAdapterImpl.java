@@ -8,6 +8,8 @@ import com.qima.promanagerapi.application.ports.CategoryRepositoryAdapter;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
+import java.util.List;
+
 @Component
 @RequiredArgsConstructor
 public class CategoryRepositoryAdapterImpl implements CategoryRepositoryAdapter {
@@ -19,5 +21,12 @@ public class CategoryRepositoryAdapterImpl implements CategoryRepositoryAdapter 
     public Category create(Category category) {
         CategoryEntity categoryEntity = categoryRepository.save(categoryConverter.toEntity(category));
         return categoryConverter.toDomain(categoryEntity);
+    }
+
+    @Override
+    public List<Category> obtainAll() {
+        return categoryRepository.findAll()
+                .stream()
+                .map(categoryConverter::toDomain).toList();
     }
 }

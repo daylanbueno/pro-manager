@@ -7,6 +7,8 @@ import com.qima.promanagerapi.application.ports.CategoryServiceAdapter;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("api/categories")
 @RequiredArgsConstructor
@@ -19,6 +21,12 @@ public class CategoryController {
     private CategoryDto create(@RequestBody CategoryDto categoryDto){
         Category category = categoryServiceAdapter.create(categoryConverter.toDomain(categoryDto));
         return categoryConverter.toDto(category);
+    }
+
+    @GetMapping
+    private List<CategoryDto>  obtainAll(){
+        List<Category> categories = categoryServiceAdapter.obtainAll();
+        return categories.stream().map(categoryConverter::toDto).toList() ;
     }
 
 }
