@@ -1,4 +1,4 @@
-# ProManager
+# pro-manager
 
 ProManager is a user-friendly web application for managing products, built with the Spring Framework. 
 It allows users to list, add, edit, and delete products, featuring a product table with columns like name, description, price, category path, and availability.
