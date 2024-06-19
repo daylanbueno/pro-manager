@@ -18,7 +18,9 @@ export function Login() {
         });
     };
 
-    const handleLogin = async () => {
+    const handleSubmit = async (e) => {
+        e.preventDefault(); 
+        
         try {
             const response = await axios.post('http://localhost:8080/api/auth', {
                 login: loginData.username,
@@ -36,36 +38,38 @@ export function Login() {
         <Box display="flex" height="100vh" justifyContent="center" alignItems="center">
             <Box sx={{ width: '300px', p: 3, boxShadow: 3, borderRadius: 8 }}>
                 <Typography variant="h4" gutterBottom sx={{ textAlign: 'center' }}>Login</Typography>
-                <TextField
-                    fullWidth
-                    label="Username"
-                    name="username"
-                    value={loginData.username}
-                    onChange={handleInputChange}
-                    variant="outlined"
-                    margin="normal"
-                />
-                <TextField
-                    fullWidth
-                    type="password"
-                    label="Password"
-                    name="password"
-                    value={loginData.password}
-                    onChange={handleInputChange}
-                    variant="outlined"
-                    margin="normal"
-                    error={error !== ''}
-                    helperText={error}
-                />
-                <Button
-                    fullWidth
-                    onClick={handleLogin}
-                    variant="contained"
-                    color="primary"
-                    sx={{ mt: 2 }}
-                >
-                    Enter
-                </Button>
+                <form onSubmit={handleSubmit}>
+                    <TextField
+                        fullWidth
+                        label="Username"
+                        name="username"
+                        value={loginData.username}
+                        onChange={handleInputChange}
+                        variant="outlined"
+                        margin="normal"
+                    />
+                    <TextField
+                        fullWidth
+                        type="password"
+                        label="Password"
+                        name="password"
+                        value={loginData.password}
+                        onChange={handleInputChange}
+                        variant="outlined"
+                        margin="normal"
+                        error={error !== ''}
+                        helperText={error}
+                    />
+                    <Button
+                        fullWidth
+                        type="submit" 
+                        variant="contained"
+                        color="primary"
+                        sx={{ mt: 2 }}
+                    >
+                        Enter
+                    </Button>
+                </form>
             </Box>
         </Box>
     );

@@ -69,6 +69,8 @@ public class AuthAdapterImpl implements AuthAdapter {
             return JWT.create()
                     .withIssuer(applicationName)
                     .withSubject(user.getLogin())
+                    .withClaim("name", user.getName())
+                    .withClaim("role", user.getRole().name())
                     .withExpiresAt(generateExpirationDate(expiration))
                     .sign(algorithm);
         } catch (JWTCreationException exception) {

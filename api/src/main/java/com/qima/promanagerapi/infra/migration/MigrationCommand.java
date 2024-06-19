@@ -25,8 +25,8 @@ public class MigrationCommand implements CommandLineRunner {
     public void run(String... args) throws Exception {
         System.out.println("Migration started");
 
-        userServiceAdapter.create(new User(null, "Manager", "user.admin", "password", RoleEnum.ADMIN));
-        userServiceAdapter.create(new User(null, "Cliente", "user.user", "password", RoleEnum.USER));
+        userServiceAdapter.create(new User(null, "User Manager", "user.admin", "password", RoleEnum.ADMIN));
+        userServiceAdapter.create(new User(null, "User Admin", "user.user", "password", RoleEnum.USER));
         Category eletronics = categoryServiceAdapter.create(new Category(null, "Eletronic"));
         categoryServiceAdapter.create(new Category(null, "Automotive"));
         categoryServiceAdapter.create(new Category(null, "Groceries"));

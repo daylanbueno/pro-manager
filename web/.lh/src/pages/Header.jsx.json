@@ -1,0 +1,30 @@
+{
+    "sourceFile": "src/pages/Header.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1718796995262,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1718797085382,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,35 @@\n+import React from 'react';\n+import { AppBar, Toolbar, Typography, Button } from '@mui/material';\n+import jwtDecode from 'jwt-decode';\n+import { useNavigate } from 'react-router-dom';\n+\n+const Header = () => {\n+  const navigate = useNavigate();\n+  const token = localStorage.getItem('token');\n+\n+  let userName = '';\n+  if (token) {\n+    const decodedToken = jwtDecode(token);\n+    userName = decodedToken.name;\n+  }\n+\n+  const handleLogout = () => {\n+    localStorage.removeItem('token');\n+    navigate('/login');\n+  };\n+\n+  return (\n+    <AppBar position=\"static\">\n+      <Toolbar>\n+        <Typography variant=\"h6\" sx={{ flexGrow: 1 }}>\n+          Welcome, {userName}\n+        </Typography>\n+        <Button color=\"inherit\" onClick={handleLogout}>\n+          Logout\n+        </Button>\n+      </Toolbar>\n+    </AppBar>\n+  );\n+};\n+\n+export default Header;\n"
+                },
+                {
+                    "date": 1718797094644,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import React from 'react';\n import { AppBar, Toolbar, Typography, Button } from '@mui/material';\n-import jwtDecode from 'jwt-decode';\n+import {jwtDecode} from 'jwt-decode';\n import { useNavigate } from 'react-router-dom';\n \n const Header = () => {\n   const navigate = useNavigate();\n@@ -32,39 +32,4 @@\n   );\n };\n \n export default Header;\n-import React from 'react';\n-import { AppBar, Toolbar, Typography, Button, Box } from '@mui/material';\n-import jwtDecode from 'jwt-decode';\n-import { useNavigate } from 'react-router-dom';\n-\n-const Header = () => {\n-  const navigate = useNavigate();\n-  const token = localStorage.getItem('token');\n-\n-  let userName = '';\n-  if (token) {\n-    const decodedToken = jwtDecode(token);\n-    userName = decodedToken.name;\n-  }\n-\n-  const handleLogout = () => {\n-    localStorage.removeItem('token');\n-    navigate('/login');\n-  };\n-\n-  return (\n-    <AppBar position=\"static\">\n-      <Toolbar>\n-        <Typography variant=\"h6\" sx={{ flexGrow: 1 }}>\n-          Welcome, {userName}\n-        </Typography>\n-        <Button color=\"inherit\" onClick={handleLogout}>\n-          Logout\n-        </Button>\n-      </Toolbar>\n-    </AppBar>\n-  );\n-};\n-\n-export default Header;\n"
+                },
+                {
+                    "date": 1718797128775,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import React from 'react';\n import { AppBar, Toolbar, Typography, Button } from '@mui/material';\n-import {jwtDecode} from 'jwt-decode';\n+import { jwtDecode } from 'jwt-decode';\n import { useNavigate } from 'react-router-dom';\n \n const Header = () => {\n   const navigate = useNavigate();\n@@ -14,9 +14,9 @@\n   }\n \n   const handleLogout = () => {\n     localStorage.removeItem('token');\n-    navigate('/login');\n+    navigate('/');\n   };\n \n   return (\n     <AppBar position=\"static\">\n"
+                }
+            ],
+            "date": 1718796995261,
+            "name": "Commit-0",
+            "content": "import React from 'react';\nimport { AppBar, Toolbar, Typography, Button, Box } from '@mui/material';\nimport jwtDecode from 'jwt-decode';\nimport { useNavigate } from 'react-router-dom';\n\nconst Header = () => {\n  const navigate = useNavigate();\n  const token = localStorage.getItem('token');\n\n  let userName = '';\n  if (token) {\n    const decodedToken = jwtDecode(token);\n    userName = decodedToken.name;\n  }\n\n  const handleLogout = () => {\n    localStorage.removeItem('token');\n    navigate('/login');\n  };\n\n  return (\n    <AppBar position=\"static\">\n      <Toolbar>\n        <Typography variant=\"h6\" sx={{ flexGrow: 1 }}>\n          Welcome, {userName}\n        </Typography>\n        <Button color=\"inherit\" onClick={handleLogout}>\n          Logout\n        </Button>\n      </Toolbar>\n    </AppBar>\n  );\n};\n\nexport default Header;\n"
+        }
+    ]
+}
