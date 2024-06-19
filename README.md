@@ -7,6 +7,9 @@ with a super user role for complete administrative control.
 The database schema efficiently stores products and categories, allowing easy retrieval of full category paths.
 
 ## This project was developed using hexagonal architecture.
+![image](https://github.com/daylanbueno/pro-manager/assets/17939912/7be52215-fd06-4ed0-a8f5-25d24e3c7353)
+
+
 ## Technologies
 - Java 17
 - Spring boot 3.3.0
@@ -34,6 +37,16 @@ The database schema efficiently stores products and categories, allowing easy re
   - ![Screenshot from 2024-06-19 11-59-17](https://github.com/daylanbueno/pro-manager-api/assets/17939912/3d85f953-eeaa-497b-ba40-e115787a01e1)
   - docker-compose
   - ![Screenshot from 2024-06-19 12-00-01](https://github.com/daylanbueno/pro-manager-api/assets/17939912/95411d44-cd1f-4e65-a560-6d70a41dd81f)
+
+The application will be available: http://localhost
+### Users
+- user.admin: role - admi
+- user.user:  role - user
+- password: password
+
+  ![Peek 2024-06-19 14-09](https://github.com/daylanbueno/pro-manager/assets/17939912/ea0edaa1-1d2e-45e1-a5fa-d6b527dfe791)
+  ![Peek 2024-06-19 14-10](https://github.com/daylanbueno/pro-manager/assets/17939912/8e91f672-39c8-4015-857f-563f519ed240)
+
 
 
   
