@@ -1,0 +1,21 @@
+version: "3.0"
+services:
+  api:
+    build: "./api"
+    container_name: pro_manager_backend
+    restart: always
+    ports:
+      - "8080:8080"
+    expose:
+      - 8080
+
+  web:
+    build: "./web"
+    container_name: pro_manager_web
+    links:
+      - "api:pro_manager_backend"
+    restart: always
+    ports:
+      - "80:80"
+    depends_on:
+      - api

@@ -1,0 +1,62 @@
+{
+    "sourceFile": "docker-compose.yml",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 11,
+            "patches": [
+                {
+                    "date": 1718807952944,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1718807958045,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,7 +16,4 @@\n       - RDS_PORT=5432\n       - RDS_USERNAME=postgres\n       - RDS_PASSWORD=admin\n     restart: always\n-\n-volumes:\n-  db_data:\n"
+                },
+                {
+                    "date": 1718808006045,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,14 +1,14 @@\n version: \"3.0\"\n services:\n   web:\n-    image: sumday/sindicato_digital_web\n+    image: sumday/pro_manager_web\n     ports:\n       - \"80:80\"\n     restart: always\n \n   api:\n-    image: sumday/sindicato_digital_api\n+    image: sumday/pro_manager_api\n     ports:\n       - \"8080:8080\"\n     environment:\n       - SPRING_PROFILES_ACTIVE=dev\n"
+                },
+                {
+                    "date": 1718808015476,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,11 +9,5 @@\n   api:\n     image: sumday/pro_manager_api\n     ports:\n       - \"8080:8080\"\n-    environment:\n-      - SPRING_PROFILES_ACTIVE=dev\n-      - RDS_HOSTNAME=db\n-      - RDS_PORT=5432\n-      - RDS_USERNAME=postgres\n-      - RDS_PASSWORD=admin\n     restart: always\n"
+                },
+                {
+                    "date": 1718808029663,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,13 +1,13 @@\n version: \"3.0\"\n services:\n   web:\n-    image: sumday/pro_manager_web\n+    image: daylanbueno/pro_manager_web\n     ports:\n       - \"80:80\"\n     restart: always\n \n   api:\n-    image: sumday/pro_manager_api\n+    image: daylanbueno/pro_manager_api\n     ports:\n       - \"8080:8080\"\n     restart: always\n"
+                },
+                {
+                    "date": 1718808159461,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,13 +1,47 @@\n version: \"3.0\"\n services:\n-  web:\n-    image: daylanbueno/pro_manager_web\n+  db:\n+    image: postgres\n+    volumes:\n+      - db_data:/var/lib/postgresql/data\n     ports:\n-      - \"80:80\"\n+      - \"5432:5432\"\n+    environment:\n+      - POSTGRES_PASSWORD=admin\n+      - POSTGRES_USER=postgres\n+      - POSTGRES_DB=db_sindicato_digital\n+    healthcheck:\n+      test: [ \"CMD-SHELL\", \"pg_isready -U postgres\" ]\n+      interval: 10s\n+      timeout: 5s\n+      retries: 5\n     restart: always\n \n   api:\n-    image: daylanbueno/pro_manager_api\n+    build: \"./api\"\n+    container_name: sindicato_digital_backend\n+    restart: always\n     ports:\n       - \"8080:8080\"\n+    environment:\n+      - RDS_HOSTNAME=db\n+      - RDS_PORT=5432\n+      - RDS_USERNAME=postgres\n+      - RDS_PASSWORD=admin\n+    expose:\n+      - 8080\n+    depends_on:\n+      - db\n+\n+  web:\n+    build: \"./web\"\n+    container_name: sindicato_digital_frontend\n+    links:\n+      - \"api:sindicato_digital_backend\"\n     restart: always\n+    ports:\n+      - \"80:80\"\n+    depends_on:\n+      - api\n+volumes:\n+  db_data:\n"
+                },
+                {
+                    "date": 1718808169860,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,9 +34,9 @@\n       - db\n \n   web:\n     build: \"./web\"\n-    container_name: sindicato_digital_frontend\n+    container_name: pro_manager_web\n     links:\n       - \"api:sindicato_digital_backend\"\n     restart: always\n     ports:\n"
+                },
+                {
+                    "date": 1718808187660,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,9 +36,9 @@\n   web:\n     build: \"./web\"\n     container_name: pro_manager_web\n     links:\n-      - \"api:sindicato_digital_backend\"\n+      - \"api:pro_manager_backend\"\n     restart: always\n     ports:\n       - \"80:80\"\n     depends_on:\n"
+                },
+                {
+                    "date": 1718808196118,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n     restart: always\n \n   api:\n     build: \"./api\"\n-    container_name: sindicato_digital_backend\n+    container_name: pro_manager_backend\n     restart: always\n     ports:\n       - \"8080:8080\"\n     environment:\n"
+                },
+                {
+                    "date": 1718808215003,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,17 +22,10 @@\n     container_name: pro_manager_backend\n     restart: always\n     ports:\n       - \"8080:8080\"\n-    environment:\n-      - RDS_HOSTNAME=db\n-      - RDS_PORT=5432\n-      - RDS_USERNAME=postgres\n-      - RDS_PASSWORD=admin\n     expose:\n       - 8080\n-    depends_on:\n-      - db\n \n   web:\n     build: \"./web\"\n     container_name: pro_manager_web\n"
+                },
+                {
+                    "date": 1718808220569,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,23 +1,6 @@\n version: \"3.0\"\n services:\n-  db:\n-    image: postgres\n-    volumes:\n-      - db_data:/var/lib/postgresql/data\n-    ports:\n-      - \"5432:5432\"\n-    environment:\n-      - POSTGRES_PASSWORD=admin\n-      - POSTGRES_USER=postgres\n-      - POSTGRES_DB=db_sindicato_digital\n-    healthcheck:\n-      test: [ \"CMD-SHELL\", \"pg_isready -U postgres\" ]\n-      interval: 10s\n-      timeout: 5s\n-      retries: 5\n-    restart: always\n-\n   api:\n     build: \"./api\"\n     container_name: pro_manager_backend\n     restart: always\n"
+                },
+                {
+                    "date": 1718808235076,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,7 +17,5 @@\n     restart: always\n     ports:\n       - \"80:80\"\n     depends_on:\n-      - api\n-volumes:\n-  db_data:\n+      - api\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1718807952944,
+            "name": "Commit-0",
+            "content": "version: \"3.0\"\nservices:\n  web:\n    image: sumday/sindicato_digital_web\n    ports:\n      - \"80:80\"\n    restart: always\n\n  api:\n    image: sumday/sindicato_digital_api\n    ports:\n      - \"8080:8080\"\n    environment:\n      - SPRING_PROFILES_ACTIVE=dev\n      - RDS_HOSTNAME=db\n      - RDS_PORT=5432\n      - RDS_USERNAME=postgres\n      - RDS_PASSWORD=admin\n    restart: always\n\nvolumes:\n  db_data:\n"
+        }
+    ]
+}
