@@ -22,7 +22,6 @@ The database schema efficiently stores products and categories, allowing easy re
 - 
 ## Requirements for execution
 - Java
-- Java
 - Docker
 - docker-compose
 - Node 20+
