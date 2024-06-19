@@ -9,7 +9,7 @@ The database schema efficiently stores products and categories, allowing easy re
 ## This project was developed using hexagonal architecture.
 ## Technologies
 - Java 17
-- Spring boot 3.1.5
+- Spring boot 3.3.0
 - Maven
 - Lombok
 - H2 database
